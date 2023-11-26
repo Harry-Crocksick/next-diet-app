@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .responsive-grid {
+    @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12;
+  }
+
+  .fluid-layout {
+    @apply container mx-auto px-4 xl:px-20 mt-12 lg:mt-24;
+  }
+
+  .secondary-fluid-layout {
+    @apply container mx-auto px-4 xl:px-20;
+  }
+
+  .primary-btn {
+    @apply bg-black w-48 text-center px-4 py-2 text-white rounded-lg border border-black;
+  }
+
+  .secondary-btn {
+    @apply bg-white w-48 px-4 py-2 text-black rounded-lg border border-black;
+  }
+
+  .main-header {
+    @apply text-2xl lg:text-6xl font-semibold lg:leading-snug;
+  }
+
+  .description {
+    @apply text-[#493b4e] tracking-wide lg:max-w-[24rem] my-6;
+  }
+
+  .filter-tag {
+    @apply flex items-center space-x-2 px-2 py-1 lg:px-4 lg:py-2.5 border-2 border-black rounded-full;
+  }
+
+  .responsive-image {
+    @apply object-cover object-center max-w-full;
+  }
+}
