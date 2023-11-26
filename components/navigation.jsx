@@ -60,7 +60,7 @@ export default function Navigation() {
         } duration-300 ease-out flex flex-col fixed right-0 top-0 bottom-0 px-4 bg-white w-80 h-full z-50`}
       >
         <div className="flex justify-between items-center py-3 lg:py-4 border-b-2 border-gray-200 mb-4">
-          <h1 className="text-2xl font-semibold">Diet App</h1>
+          <h1 className="text-2xl font-semibold">Diet Plan</h1>
           <ul className="flex items-center space-x-2">
             <li>
               <span className="material-symbols-outlined align-middle">
