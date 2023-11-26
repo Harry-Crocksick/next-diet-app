@@ -60,12 +60,12 @@ export const metadata = {
     images: ["https://i.postimg.cc/rsLNx5vD/thumbnail.png"],
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
       index: true,
-      follow: false,
+      follow: true,
       noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
@@ -77,7 +77,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={sora.className}>
+      <body className={`${sora.className} antialiased overflow-x-hidden`}>
         <Navigation />
         {children}
         <Footer />
