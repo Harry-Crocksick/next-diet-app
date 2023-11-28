@@ -137,8 +137,7 @@ export default function Page() {
               <div className="w-10 h-0.5 bg-black"></div>
             </div>
             <h1 className="main-header">
-              Nutrient
-              <br className="hidden md:inline" />
+              Nutrient <br className="hidden md:inline" />
               Rich Fruit
             </h1>
             <p className="description">
