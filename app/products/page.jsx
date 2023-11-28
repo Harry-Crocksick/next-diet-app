@@ -92,7 +92,7 @@ export default function Page() {
               type="search"
               name="search"
               id="search"
-              className="flex-1 border-none focus:bg-slate-100 focus:ring-0"
+              className="flex-1 w-full border-none focus:bg-slate-100 focus:ring-0"
               placeholder="Search"
             />
           </div>
