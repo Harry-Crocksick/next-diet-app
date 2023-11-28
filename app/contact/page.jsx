@@ -15,7 +15,7 @@ export default function Page() {
       <section className="flex justify-center items-center w-full h-[597px] bg-no-repeat bg-cover bg-center bg-contact-hero-img-1">
         <div className="text-center">
           <h1 className="main-header">Contact Us</h1>
-          <p>Home / About Us</p>
+          <p>Home / Contact Us</p>
         </div>
       </section>
       {/* <!-- contact hero ends --> */}
