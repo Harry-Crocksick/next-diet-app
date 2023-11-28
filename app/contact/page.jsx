@@ -109,6 +109,7 @@ export default function Page() {
           <div className="basis-full md:basis-1/2 mx-auto rounded-lg overflow-scroll">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.76680603175!2d96.1312435748582!3d16.837920818402257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c195111f0461f5%3A0x224087b3abdc6b2a!2sInya%20View%20Motel%20Yangon!5e0!3m2!1sen!2smm!4v1700570326171!5m2!1sen!2smm"
+              title="Google map of Inya View"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
