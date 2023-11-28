@@ -25,7 +25,7 @@ export default function Page() {
       <section className="fluid-layout my-24">
         <div className="responsive-grid gap-8">
           <div className="relative px-6 py-10 col-span-full lg:col-span-4 bg-teal-100/80 rounded-lg overflow-hidden">
-            <h3 className="font-bold text-black text-xl">Special Set</h3>
+            <h2 className="font-bold text-black text-xl">Special Set</h2>
             <p className="my-3 text-sm max-w-[10rem] xl:max-w-[15rem] z-10">
               A healthy balanced diet plan to individual health goals.
             </p>
@@ -41,7 +41,7 @@ export default function Page() {
             />
           </div>
           <div className="relative px-6 py-10 col-span-full lg:col-span-4 bg-pink-100/80 rounded-lg overflow-hidden">
-            <h3 className="font-bold text-black text-xl">Fresh Juices</h3>
+            <h2 className="font-bold text-black text-xl">Fresh Juices</h2>
             <p className="my-3 text-sm max-w-[10rem] xl:max-w-[15rem] z-10">
               Tailored fresh juice blends for a quick and nutritious boost.
             </p>
@@ -57,7 +57,7 @@ export default function Page() {
             />
           </div>
           <div className="relative px-6 py-10 col-span-full lg:col-span-4 bg-teal-100/80 rounded-lg overflow-hidden">
-            <h3 className="font-bold text-black text-xl">Customer Set</h3>
+            <h2 className="font-bold text-black text-xl">Customer Set</h2>
             <p className="my-3 text-sm max-w-[10rem] xl:max-w-[15rem] z-10">
               We offer uniquely to meet your beauty and health needs.
             </p>
@@ -220,7 +220,7 @@ export default function Page() {
                 <img src={delivery.image} alt={delivery.title} />
               </div>
               <div>
-                <h4 className="font-semibold text-xl">{delivery.title}</h4>
+                <h2 className="font-semibold text-xl">{delivery.title}</h2>
                 <p className="text-slate-500">{delivery.description}</p>
               </div>
             </div>

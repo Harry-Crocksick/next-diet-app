@@ -15,7 +15,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="col-span-full md:col-span-6 lg:col-span-2">
-            <h4 className="mb-4">PRODUCT</h4>
+            <h2 className="mb-4">PRODUCT</h2>
             <ul className="text-[#d9d9d9] flex flex-col space-y-2">
               {productLinks.map((link) => (
                 <li key={link}>
@@ -30,7 +30,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-span-full md:col-span-6 lg:col-span-2">
-            <h4 className="mb-4">ABOUT</h4>
+            <h2 className="mb-4">ABOUT</h2>
             <ul className="text-[#d9d9d9] flex flex-col space-y-2">
               {aboutLinks.map((link) => (
                 <li key={link}>
@@ -45,7 +45,7 @@ export default function Footer() {
             </ul>
           </div>
           <address className="flex flex-col space-y-2 not-italic col-span-full md:col-span-6 lg:col-span-2 text-[#d9d9d9]">
-            <h4 className="mb-2">CONTACT</h4>
+            <h2 className="mb-2">CONTACT</h2>
             <p>MMSIT</p>
             <p>09-445539703</p>
             <p>Shan Kone Street</p>

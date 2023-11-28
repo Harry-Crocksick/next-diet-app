@@ -21,16 +21,16 @@ export default function Home() {
             </p>
             <div className="w-full flex space-x-8">
               <div>
-                <h4>100%</h4>
-                <h5 className="font-semibold text-lg">Organic</h5>
+                <div>100%</div>
+                <p className="font-semibold text-lg">Organic</p>
               </div>
               <div>
-                <h4>0%</h4>
-                <h5 className="font-semibold text-lg">Fat</h5>
+                <div>0%</div>
+                <p className="font-semibold text-lg">Fat</p>
               </div>
               <div>
-                <h4>+90%</h4>
-                <h5 className="font-semibold text-lg">Protein</h5>
+                <div>+90%</div>
+                <p className="font-semibold text-lg">Protein</p>
               </div>
             </div>
           </div>

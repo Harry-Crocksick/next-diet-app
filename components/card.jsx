@@ -19,7 +19,7 @@ export default function Card({ ...food }) {
         />
       </div>
       <div className="flex flex-col flex-1 space-y-4">
-        <h4 className="text-2xl font-medium">{food.name}</h4>
+        <h2 className="text-2xl font-medium">{food.name}</h2>
         <div className="flex items-center space-x-3">
           <Stars rating={food.rating} />
           <span className="text-xs xl:text-base">
