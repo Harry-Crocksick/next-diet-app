@@ -12,7 +12,15 @@ export default function Page() {
   return (
     <>
       {/* <!-- about hero starts --> */}
-      <section className="relative w-full h-[590px] bg-about-hero-img-1 bg-no-repeat bg-center bg-cover">
+      <section className="relative w-full h-[590px]">
+        <Image
+          src="/assets/hero-image-2.png"
+          alt="About page hero background image"
+          fill
+          priority
+          size="100vw"
+          className="object-center object-cover -z-10"
+        />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
           <h1 className="main-header">About Us</h1>
           <p>Home / About Us</p>

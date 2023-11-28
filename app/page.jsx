@@ -3,14 +3,23 @@ import { dancingScript } from "@/utils/fonts";
 import Card from "@/components/card";
 import Button from "@/components/Button";
 import Dots from "@/components/dots";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       {/* Hero background image section starts */}
-      <section className="w-full h-[650px] lg:h-[960px] bg-hero-img-1 bg-no-repeat bg-center bg-cover">
-        <div className="fluid-layout h-full grid grid-cols-12">
-          <div className="col-span-full lg:col-span-5 mt-12">
+      <section className="relative w-full h-[850px] lg:h-[960px]">
+        <Image
+          src="/assets/header-img-1.png"
+          alt="Home page hero background image"
+          sizes="100vw"
+          fill
+          priority
+          className="[mask-image:_linear-gradient(to_top,_rgba(0,0,0,1),_transparent)] object-center object-cover -mt-28 -z-50"
+        />
+        <div className="fluid-layout mt-0 h-full grid grid-cols-12">
+          <div className="col-span-full lg:col-span-5 mt-16 lg:mt-32">
             <h1 className="main-header">
               Healthy Food <br className="hidden lg:inline" />
               and Salad
@@ -37,7 +46,7 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- products and services starts --> */}
-      <section className="fluid-layout">
+      <section className="fluid-layout -mt-20 lg:-mt-10">
         <div className="flex flex-wrap justify-between items-center mb-8">
           <div className="flex space-x-2 basis-full lg:basis-1/2">
             <div className="w-1 h-[2.25rem] bg-black"></div>
@@ -55,9 +64,9 @@ export default function Home() {
           <Button styles="primary-btn">SEE MORE</Button>
         </div>
         {/* <!-- Food item cards starts --> */}
-        <div className="w-full responsive-grid gap-6" id="homeCardsContainer">
-          {homeFoods.map((food, index) => (
-            <Card key={index} {...food} />
+        <div className="w-full responsive-grid gap-6">
+          {homeFoods.map((food) => (
+            <Card key={food.id} {...food} />
           ))}
         </div>
         {/* <!-- Food item cards ends --> */}
@@ -68,7 +77,15 @@ export default function Home() {
       </section>
       {/* <!-- products and services ends --> */}
       {/* <!-- why choose us starts --> */}
-      <section className="w-full h-[650px] lg:min-h-[909px] mt-14 bg-hero-img-2 bg-no-repeat bg-center bg-cover">
+      <section className="relative w-full h-[650px] lg:min-h-[909px] mt-14">
+        <Image
+          src="/assets/healthy-juice.png"
+          alt="Home page second hero background image"
+          fill
+          priority
+          size="100vw"
+          className="[mask-image:_linear-gradient(to_top,_rgba(0,0,0,1),_transparent)] object-center object-cover -z-10"
+        />
         <div className="fluid-layout h-full grid items-start md:items-center grid-cols-12">
           <div className="col-span-full md:col-start-9 md:col-span-4 mt-20 md:mt-0">
             <div className="flex items-center space-x-4">

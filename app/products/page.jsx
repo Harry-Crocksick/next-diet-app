@@ -14,7 +14,15 @@ export default function Page() {
   return (
     <>
       {/* <!-- product hero starts --> */}
-      <section className="flex justify-center items-center w-full h-[597px] bg-no-repeat bg-cover bg-center bg-product-hero-img-1">
+      <section className="relative flex justify-center items-center w-full h-[597px]">
+        <Image
+          src="/assets/product-hero-img-1.png"
+          alt="Product page hero background image"
+          fill
+          priority
+          size="100vw"
+          className="object-center object-cover -z-10"
+        />
         <div className="text-center">
           <h1 className="main-header">Welcome to Diet Plan</h1>
           <p>Home / Products</p>

@@ -2,13 +2,13 @@ export default function Stars({ rating }) {
   let starsArray = [];
   for (let x = 0; x < 5; x++) {
     if (x + 1 <= Math.round(rating)) {
-      starsArray.push(<FullStar />);
+      starsArray.push(<FullStar key={x} />);
     } else {
-      starsArray.push(<EmptyStar />);
+      starsArray.push(<EmptyStar key={x} />);
     }
   }
   if (rating === Math.floor(rating) + 0.5) {
-    starsArray[Math.floor(rating)] = <HalfStar />;
+    starsArray[Math.floor(rating)] = <HalfStar key={rating} />;
   }
 
   return <span className="inline-flex space-x-2">{...starsArray}</span>;

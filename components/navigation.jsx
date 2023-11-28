@@ -17,7 +17,7 @@ export default function Navigation() {
 
   return (
     <>
-      <section className="border-b-2 z-50">
+      <section className="border-b-2 z-[9999] bg-white">
         <nav className="secondary-fluid-layout py-3 flex justify-between items-center">
           <h1 className="font-semibold text-xl">DIET PLAN</h1>
           <ul className="hidden md:flex items-center gap-x-4">
