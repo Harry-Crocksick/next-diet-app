@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Card from "@/components/card";
 import { dailySets } from "@/lib/daily-set";
 import { deliveryData } from "@/lib/delivery";
@@ -115,7 +116,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <button className="primary-btn">SEE MORE</button>
+          <Button styles="primary-btn">SEE MORE</Button>
         </div>
         {/* <!-- special set cards starts --> */}
         <div className="w-full responsive-grid gap-6">
@@ -171,7 +172,7 @@ export default function Page() {
               Energize with our nutritious healthy salad, bursting with fresh
               greens and vibrant superfoods.
             </p>
-            <button className="primary-btn mt-4">CREATE SET</button>
+            <Button styles="primary-btn mt-4">CREATE SET</Button>
             <Image
               src="/assets/scatter.png"
               alt="Scatter Fruits"
@@ -234,16 +235,16 @@ export default function Page() {
 function DoubleBtn() {
   return (
     <div className="flex items-center space-x-4">
-      <button className="primary-btn w-20">
+      <Button styles="primary-btn w-20">
         <span className="material-symbols-outlined align-middle">
           arrow_back_ios
         </span>
-      </button>
-      <button className="primary-btn w-20">
+      </Button>
+      <Button styles="primary-btn w-20">
         <span className="material-symbols-outlined align-middle">
           arrow_forward_ios
         </span>
-      </button>
+      </Button>
     </div>
   );
 }

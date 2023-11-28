@@ -2,6 +2,7 @@ import Image from "next/image";
 import { chefs } from "@/lib/chef-data";
 import { logos } from "@/lib/logo";
 import { dancingScript } from "@/utils/fonts";
+import Button from "@/components/Button";
 
 export const metadata = {
   title: "About Us",
@@ -70,7 +71,7 @@ export default function Page() {
               <p>Elevate Your Health!</p>
             </li>
           </ul>
-          <button className="primary-btn">CONNECT NOW</button>
+          <Button styles="primary-btn">CONNECT NOW</Button>
         </div>
       </section>
       {/* <!-- choose us ends --> */}
@@ -89,7 +90,7 @@ export default function Page() {
             We offers a wide range of high-quality products
           </p>
         </div>
-        <div className="chefs-container responsive-grid gap-8 mt-10 mb-16">
+        <div className="responsive-grid gap-8 mt-10 mb-16">
           {chefs.map((chef) => (
             <div
               key={chef.id}
@@ -144,7 +145,7 @@ export default function Page() {
               Elevate your diet with our carefully selected organic fruits.
               Packed with essential vitamins and antioxidants.
             </p>
-            <button className="primary-btn">SHOW ALL</button>
+            <Button styles="primary-btn">SHOW ALL</Button>
           </div>
         </div>
       </section>

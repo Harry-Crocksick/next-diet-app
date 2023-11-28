@@ -1,6 +1,8 @@
 import { homeFoods } from "@/lib/home-food-data";
 import { dancingScript } from "@/utils/fonts";
 import Card from "@/components/card";
+import Button from "@/components/Button";
+import Dots from "@/components/dots";
 
 export default function Home() {
   return (
@@ -50,7 +52,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <button className="primary-btn">SEE MORE</button>
+          <Button styles="primary-btn">SEE MORE</Button>
         </div>
         {/* <!-- Food item cards starts --> */}
         <div className="w-full responsive-grid gap-6" id="homeCardsContainer">
@@ -60,11 +62,7 @@ export default function Home() {
         </div>
         {/* <!-- Food item cards ends --> */}
         {/* <!-- dots starts --> */}
-        <div className="flex space-x-2 justify-center items-center mt-8">
-          <div className="w-2 h-2 bg-black rounded-full"></div>
-          <div className="w-2 h-2 bg-[#d9d9d9] rounded-full"></div>
-          <div className="w-2 h-2 bg-[#d9d9d9] rounded-full"></div>
-        </div>
+        <Dots />
         {/* <!-- dots ends --> */}
         {/* <!-- Food item cards ends --> */}
       </section>
@@ -88,7 +86,7 @@ export default function Home() {
               Start your day with a burst of freshness, indulge in our
               invigorating range of fresh juices from finest fruits
             </p>
-            <button className="primary-btn">SHOW ALL</button>
+            <Button styles="primary-btn">SHOW ALL</Button>
           </div>
         </div>
       </section>
@@ -110,8 +108,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <button className="primary-btn">SIGNUP NOW</button>
-            <button className="secondary-btn">REGISTER</button>
+            <Button styles="primary-btn">SIGNUP NOW</Button>
+            <Button styles="secondary-btn">REGISTER</Button>
           </div>
         </div>
       </section>

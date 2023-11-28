@@ -2,6 +2,7 @@ import { faqs } from "@/lib/FAQs";
 import { contacts } from "@/lib/contact-card-data";
 import Image from "next/image";
 import { dancingScript } from "@/utils/fonts";
+import Button from "@/components/Button";
 
 export const metadata = {
   title: "Contact Us",
@@ -71,10 +72,7 @@ export default function Page() {
             Explore our comprehensive for dieting and nutrition
           </p>
         </div>
-        <div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-14"
-          id="faqContainer"
-        >
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
           {faqs.map((faq) => (
             <div key={faq.question} className="col-span-2">
               <h4 className="text-xl font-semibold mb-4">{faq.question}</h4>
@@ -148,9 +146,9 @@ export default function Page() {
                 className="w-full rounded-md"
               ></textarea>
             </div>
-            <button type="submit" className="primary-btn mt-10 ml-auto">
+            <Button type="submit" styles="primary-btn mt-10 ml-auto">
               SUBMIT REQUEST
-            </button>
+            </Button>
           </form>
         </div>
       </section>
