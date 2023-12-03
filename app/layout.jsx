@@ -9,6 +9,7 @@ export const metadata = {
     default: "Diet App",
   },
   description: "The most reliable Diet App for your daily needs",
+  metadataBase: new URL("https://next-diet-app.vercel.app"),
   generator: "Next.js",
   applicationName: "Diet App",
   referrer: "origin-when-cross-origin",
