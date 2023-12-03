@@ -1,31 +1,16 @@
-"use client";
-
-import { useState } from "react";
 import Button from "@/components/Button";
-import Input from "@/components/Input";
 import Card from "@/components/card";
 import { dailySets } from "@/lib/daily-set";
 import { deliveryData } from "@/lib/delivery";
 import { freshJuiceSets } from "@/lib/fresh-juice";
-import { specialSets } from "@/lib/special-set";
 import Image from "next/image";
+import FilterProducts from "@/components/FilterProducts";
 
-// export const metadata = {
-//   title: "Products",
-// };
+export const metadata = {
+  title: "Products",
+};
 
 export default function Page() {
-  const [query, setQuery] = useState("");
-  const searchQuery = query.trim().toLowerCase();
-
-  function handleSearch(searchText) {
-    setQuery(searchText);
-  }
-
-  const filteredItems = specialSets.filter((specialSet) =>
-    specialSet.name.toLowerCase().includes(searchQuery)
-  );
-
   return (
     <>
       {/* <!-- product hero starts --> */}
@@ -34,7 +19,6 @@ export default function Page() {
           src="/assets/product-hero-img-1.png"
           alt="Product page hero background image"
           fill
-          priority
           size="100vw"
           className="object-center object-cover -z-10"
         />
@@ -100,47 +84,7 @@ export default function Page() {
       {/* <!-- product set ends --> */}
       {/* <!-- search starts --> */}
       <section className="fluid-layout">
-        <div className="flex flex-wrap items-center gap-4 justify-between">
-          <div className="flex items-center max-w-[475px] w-full border-2 border-black rounded-full px-4 py-1">
-            <span className="material-symbols-outlined"> search </span>
-            <Input onSearch={handleSearch} value={query} />
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="filter-tag">
-              <span aria-label="Show">Show: </span>
-              <span className="text-slate-500">1 of 5</span>
-            </div>
-            <div className="filter-tag">
-              <span aria-label="Sort by">Sort By: </span>
-              <span className="text-slate-500">Newest</span>
-            </div>
-            <div className="filter-tag">
-              <span className="material-symbols-outlined"> filter_alt </span>
-              <span>Filter</span>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-wrap justify-between items-center my-12">
-          <div className="flex space-x-2 basis-full lg:basis-1/2">
-            <div className="w-1 h-[2.25rem] bg-black"></div>
-            <div>
-              <h2 className="text-2xl lg:text-4xl font-semibold">
-                Special Set
-              </h2>
-              <p className="text-[#493b4e] tracking-wide my-6">
-                Your unique diet plan, crafted for your health and taste
-                preferences and personalized approah to welliness.
-              </p>
-            </div>
-          </div>
-          <Button styles="primary-btn">SEE MORE</Button>
-        </div>
-        {/* <!-- special set cards starts --> */}
-        <div className={`w-full responsive-grid gap-6`}>
-          {filteredItems.map((specialSet) => (
-            <Card key={specialSet.id} {...specialSet} />
-          ))}
-        </div>
+        <FilterProducts />
         {/* <!-- special set cards ends --> */}
         <div className="flex flex-wrap justify-between items-center my-12">
           <div className="flex space-x-2 basis-full lg:basis-1/2">

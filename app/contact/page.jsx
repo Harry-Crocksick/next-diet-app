@@ -17,7 +17,6 @@ export default function Page() {
           src="/assets/contact-hero-1.png"
           alt="Contact page hero background image"
           fill
-          priority
           size="100vw"
           className="object-center object-cover -z-10"
         />

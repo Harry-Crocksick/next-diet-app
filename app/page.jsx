@@ -4,6 +4,7 @@ import Card from "@/components/card";
 import Button from "@/components/Button";
 import Dots from "@/components/dots";
 import Image from "next/image";
+import ExtraInfo from "@/components/ExtraInfo";
 
 export default function Home() {
   return (
@@ -13,9 +14,8 @@ export default function Home() {
         <Image
           src="/assets/header-img-1.png"
           alt="Home page hero background image"
-          sizes="100vw"
           fill
-          priority
+          sizes="100vw"
           className="[mask-image:_linear-gradient(to_top,_rgba(0,0,0,1),_transparent)] object-center object-cover -mt-28 -z-50"
         />
         <div className="fluid-layout mt-0 h-full grid grid-cols-12">
@@ -47,22 +47,10 @@ export default function Home() {
       </section>
       {/* <!-- products and services starts --> */}
       <section className="fluid-layout -mt-20 lg:-mt-10">
-        <div className="flex flex-wrap justify-between items-center mb-8">
-          <div className="flex space-x-2 basis-full lg:basis-1/2">
-            <div className="w-1 h-[2.25rem] bg-black"></div>
-            <div>
-              <h2 className="text-2xl lg:text-4xl font-medium">
-                Products and Services
-              </h2>
-              <p className="text-[#493b4e] tracking-wide my-6">
-                We offers a wide range of high-quality products and services
-                tailored to meet the diverse needs and preferences of our
-                customers.
-              </p>
-            </div>
-          </div>
-          <Button styles="primary-btn">SEE MORE</Button>
-        </div>
+        <ExtraInfo title="Products and Services">
+          We offers a wide range of high-quality products and services tailored
+          to meet the diverse needs and preferences of our customers.
+        </ExtraInfo>
         {/* <!-- Food item cards starts --> */}
         <div className="w-full responsive-grid gap-6">
           {homeFoods.map((food) => (
@@ -82,7 +70,6 @@ export default function Home() {
           src="/assets/healthy-juice.png"
           alt="Home page second hero background image"
           fill
-          priority
           size="100vw"
           className="[mask-image:_linear-gradient(to_top,_rgba(0,0,0,1),_transparent)] object-center object-cover -z-10"
         />
