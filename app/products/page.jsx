@@ -19,6 +19,7 @@ export default function Page() {
           src="/assets/product-hero-img-1.png"
           alt="Product page hero background image"
           fill
+          priority
           size="100vw"
           className="object-center object-cover -z-10"
         />

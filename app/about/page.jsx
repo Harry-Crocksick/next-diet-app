@@ -24,6 +24,7 @@ export default function Page() {
           src="/assets/hero-image-2.png"
           alt="About page hero background image"
           fill
+          priority
           size="100vw"
           className="object-center object-cover -z-10"
         />

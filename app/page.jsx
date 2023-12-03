@@ -15,6 +15,7 @@ export default function Home() {
           src="/assets/header-img-1.png"
           alt="Home page hero background image"
           fill
+          priority
           sizes="100vw"
           className="[mask-image:_linear-gradient(to_top,_rgba(0,0,0,1),_transparent)] object-center object-cover -mt-28 -z-50"
         />
