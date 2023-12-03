@@ -64,7 +64,11 @@ export default function Navigation() {
               </svg>
             </li>
           </ul>
-          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            aria-label="Hamburger Menu"
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -82,7 +86,7 @@ export default function Navigation() {
         } duration-300 ease-out flex flex-col fixed right-0 top-0 bottom-0 px-4 bg-white w-80 h-full z-50`}
       >
         <div className="flex justify-between items-center py-3 lg:py-4 border-b-2 border-gray-200 mb-4">
-          <h1 className="text-2xl font-semibold">Diet Plan</h1>
+          <h1 className="text-xl font-semibold">Diet Plan</h1>
           <ul className="flex items-center space-x-2">
             <li>
               <svg
@@ -132,14 +136,15 @@ export default function Navigation() {
           ))}
         </ul>
         <button
+          aria-label="Close"
           className="max-w-max mx-auto mb-4 bg-gray-100 text-black rounded-full p-4"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="22"
+            height="24"
             viewBox="0 -960 960 960"
-            width="22"
+            width="24"
           >
             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>

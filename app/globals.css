@@ -16,7 +16,7 @@
   }
 
   .primary-btn {
-    @apply bg-black w-48 text-center px-4 py-2 text-white rounded-lg border border-black;
+    @apply bg-black w-48 inline-flex items-center justify-center text-center px-4 py-2 text-white rounded-lg border border-black;
   }
 
   .secondary-btn {
