@@ -103,6 +103,7 @@ export default function Page() {
         <div className="flex flex-wrap items-center gap-4 justify-between">
           <div className="flex items-center max-w-[475px] w-full border-2 border-black rounded-full px-4 py-1">
             <span className="material-symbols-outlined"> search </span>
+            <Input onSearch={handleSearch} value={query} />
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <div className="filter-tag">

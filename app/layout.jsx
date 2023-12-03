@@ -8,6 +8,7 @@ export const metadata = {
     template: "%s | Diet App",
     default: "Diet App",
   },
+  metadataBase: new URL("https://next-diet-app.vercel.app"),
   description: "The most reliable Diet App for your daily needs",
   generator: "Next.js",
   applicationName: "Diet App",
