@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Button from "@/components/Button";
+import Input from "@/components/Input";
 import Card from "@/components/card";
 import { dailySets } from "@/lib/daily-set";
 import { deliveryData } from "@/lib/delivery";
@@ -6,11 +10,22 @@ import { freshJuiceSets } from "@/lib/fresh-juice";
 import { specialSets } from "@/lib/special-set";
 import Image from "next/image";
 
-export const metadata = {
-  title: "Products",
-};
+// export const metadata = {
+//   title: "Products",
+// };
 
 export default function Page() {
+  const [query, setQuery] = useState("");
+  const searchQuery = query.trim().toLowerCase();
+
+  function handleSearch(searchText) {
+    setQuery(searchText);
+  }
+
+  const filteredItems = specialSets.filter((specialSet) =>
+    specialSet.name.toLowerCase().includes(searchQuery)
+  );
+
   return (
     <>
       {/* <!-- product hero starts --> */}
@@ -88,13 +103,6 @@ export default function Page() {
         <div className="flex flex-wrap items-center gap-4 justify-between">
           <div className="flex items-center max-w-[475px] w-full border-2 border-black rounded-full px-4 py-1">
             <span className="material-symbols-outlined"> search </span>
-            <input
-              type="search"
-              name="search"
-              id="search"
-              className="flex-1 w-full border-none focus:bg-slate-100 focus:ring-0"
-              placeholder="Search"
-            />
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <div className="filter-tag">
@@ -127,8 +135,8 @@ export default function Page() {
           <Button styles="primary-btn">SEE MORE</Button>
         </div>
         {/* <!-- special set cards starts --> */}
-        <div className="w-full responsive-grid gap-6">
-          {specialSets.map((specialSet) => (
+        <div className={`w-full responsive-grid gap-6`}>
+          {filteredItems.map((specialSet) => (
             <Card key={specialSet.id} {...specialSet} />
           ))}
         </div>
